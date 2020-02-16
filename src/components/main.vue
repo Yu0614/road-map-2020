@@ -1,8 +1,15 @@
 <template>
  <div id="app">
 
-  <ul v-for="target of targets" :key="target.name">
-    <!--<router-link :to="{ path: target.path }">-->
+  <!-- <ul v-for="target of targets" :key="target.name"> -->
+
+    <!-- <router-link :to="{ path: target.path }"> -->
+      <internet></internet>
+      <htmls></htmls>
+      <css></css>
+      <javascript></javascript>
+    <!-- </router-link> -->
+    <!--
       <li>
         <div class="target-container">
           <p class="target-name">{{ target.name }}</p>
@@ -14,14 +21,19 @@
             </div>
           </li>
         </ul>
-      </li>
-    <!--<</router-link>-->
-  </ul>
+      </li> -->
+    <!---->
+  <!-- </ul> -->
 
  </div>
 </template>
 
 <script>
+import internet from './internet.vue'
+import htmls from './htmls.vue'
+import javascript from './javascript.vue'
+import css from './css.vue'
+
 export default {
   data: function () {
     return {
@@ -36,29 +48,29 @@ export default {
       ],
       targets: [
         { name: 'Internet', path: 'internet' },
-        { name: 'HTML', path: 'HTML' },
-        { name: 'CSS', path: 'CSS' },
-        { name: 'JavaScript', path: 'JavaScript' },
-        { name: 'VersionControl Systems' },
-        { name: 'Repo hosting services' },
-        { name: 'Web Security Knowledge' },
-        { name: 'Package Manager' },
-        { name: 'CSS Architecture' },
-        { name: 'CSS Processeor' },
-        { name: 'Build Tools' },
-        { name: 'Pick a Framework' },
-        { name: 'Modern CSS' },
-        { name: 'Web Components' },
-        { name: 'CSS Frameworks' },
-        { name: 'Testing your Apps' },
-        { name: 'Type Checkers' },
-        { name: 'Progressive Web Apps' },
-        { name: 'Server Side Rendering' },
-        { name: 'GraphQL' },
-        { name: 'Staric Site Generators' },
-        { name: 'Mobile Applications' },
-        { name: 'Desktop Applicaions' },
-        { name: 'Web Assembly' }
+        { name: 'HTML', path: 'HTML' }
+      //   { name: 'CSS', path: 'CSS' },
+      //   { name: 'JavaScript', path: 'JavaScript' },
+      //   { name: 'VersionControl Systems' },
+      //   { name: 'Repo hosting services' },
+      //   { name: 'Web Security Knowledge' },
+      //   { name: 'Package Manager' },
+      //   { name: 'CSS Architecture' },
+      //   { name: 'CSS Processeor' },
+      //   { name: 'Build Tools' },
+      //   { name: 'Pick a Framework' },
+      //   { name: 'Modern CSS' },
+      //   { name: 'Web Components' },
+      //   { name: 'CSS Frameworks' },
+      //   { name: 'Testing your Apps' },
+      //   { name: 'Type Checkers' },
+      //   { name: 'Progressive Web Apps' },
+      //   { name: 'Server Side Rendering' },
+      //   { name: 'GraphQL' },
+      //   { name: 'Staric Site Generators' },
+      //   { name: 'Mobile Applications' },
+      //   { name: 'Desktop Applicaions' },
+      //   { name: 'Web Assembly' }
       ]
     }
   },
@@ -66,6 +78,12 @@ export default {
     limitCount () {
       return this.targets.slice(0, 4)
     }
+  },
+  components: {
+    internet,
+    htmls,
+    css,
+    javascript
   }
 }
 </script>

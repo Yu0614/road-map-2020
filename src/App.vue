@@ -7,6 +7,9 @@
     【links】<br>
     <router-link to="/">top</router-link><br>
     <router-link to="/internet">internet</router-link><br>
+    <router-link to="/htmls">htmls</router-link><br>
+    <router-link to="/css">css</router-link><br>
+    <router-link to="/javascript">javascript</router-link><br>
     <hr>
     <router-view/>
 

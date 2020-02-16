@@ -7,7 +7,7 @@
         <div class="target-container">
           <p class="target-name">{{ target.name }}</p>
         </div>
-        <ul v-for="target of Internet" :key="target.name">
+        <ul v-for="target of html" :key="target.name">
           <li>
             <div class="target-container2">
               <p class="target-name">{{ target.name }}</p>
@@ -26,16 +26,16 @@ export default {
   data: function () {
     return {
       // Reference :https://roadmap.sh/frontend
-      Internet: [
-        { name: 'How dows the internet works?' },
-        { name: 'What is HTTP?' },
-        { name: 'Browsers and how they works?' },
-        { name: 'DNS and how it works?' },
-        { name: 'What is Domain Name?' },
-        { name: 'What is hosting?' }
+      html: [
+        { name: 'Learn the basics' },
+        { name: 'Writing Semantic HTML' },
+        { name: 'Forms and Validations' },
+        { name: 'Conventions and Beat Practice' },
+        { name: 'Accesibility' },
+        { name: 'SEO Basics' }
       ],
       targets: [
-        { name: 'Internet', path: 'internet' }
+        { name: 'HTML', path: 'htmls' }
       ]
     }
   },

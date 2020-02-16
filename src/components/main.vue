@@ -95,7 +95,7 @@ a {
 }
 
 .target-container2 {
-    background: palegoldenrod;
+    background: orange;
     height: 4vh;
     width: 20vw;
     border: black solid 2px;

@@ -30,7 +30,8 @@ export default {
         { name: 'Syntax and Basic Construct' },
         { name: 'Learn DOM Manipulation' },
         { name: 'Learn Fetch Api / Ajax (XHR)' },
-        { name: 'ES6+ and modular JavaScript' }
+        { name: 'ES6+ and modular JavaScript' },
+        { name: 'Understand the concepts Hoisting, Event Bubbling, Scope, Prototype, Shadow DOM, strict' }
       ],
       targets: [
         { name: 'JavaScript', path: 'javascript' }

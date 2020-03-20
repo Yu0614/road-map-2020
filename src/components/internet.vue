@@ -1,24 +1,22 @@
 <template>
- <div id="app">
-
-  <ul v-for="target of targets" :key="target.name">
-    <!--<router-link :to="{ path: target.path }">-->
+  <div id="app">
+    <ul v-for="target of targets" :key="target.name">
+      <!--<router-link :to="{ path: target.path }">-->
       <li>
-        <div class="target-container">
+        <div class="target-container" v-on:click="accordionToggle">
           <p class="target-name">{{ target.name }}</p>
         </div>
-        <ul v-for="target of Internet" :key="target.name">
+        <ul v-for="target of titles" :key="target.name" :class="{ '_state-open': isOpen }" v-on:click="accordionToggle">
           <li>
-            <div class="target-container2">
+            <div class="target-container2" v-if="isOpen">
               <p class="target-name">{{ target.name }}</p>
             </div>
           </li>
         </ul>
       </li>
-    <!--<</router-link>-->
-  </ul>
-
- </div>
+      <!--<</router-link>-->
+    </ul>
+  </div>
 </template>
 
 <script>
@@ -26,7 +24,7 @@ export default {
   data: function () {
     return {
       // Reference :https://roadmap.sh/frontend
-      Internet: [
+      titles: [
         { name: 'How dows the internet works?' },
         { name: 'What is HTTP?' },
         { name: 'Browsers and how they works?' },
@@ -36,20 +34,27 @@ export default {
       ],
       targets: [
         { name: 'Internet', path: 'internet' }
-      ]
+      ],
+      isOpen: false
     }
   },
   computed: {
     limitCount () {
       return this.targets.slice(0, 4)
     }
+  },
+  methods: {
+    accordionToggle: function () {
+      this.isOpen = !this.isOpen
+    }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+<!-- Add 'scoped' attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
+h1,
+h2 {
   font-weight: normal;
 }
 ul {
@@ -65,23 +70,23 @@ a {
 }
 
 .target-container {
-    background: yellow;
-    height: 4vh;
-    width: 20vw;
-    border: black solid 2px;
+  background: yellow;
+  height: 4vh;
+  width: 20vw;
+  border: black solid 2px;
 }
 
 .target-container2 {
-    background: orange;
-    height: 4vh;
-    width: 20vw;
-    border: black solid 2px;
+  background: orange;
+  height: 4vh;
+  width: 20vw;
+  border: black solid 2px;
 }
 
 p.target-name {
-    position: relative;
-    bottom: 7px;
-    font-family: "Gill Sans", sans-serif;
-    font-weight: 600;
+  position: relative;
+  bottom: 7px;
+  font-family: 'Gill Sans', sans-serif;
+  font-weight: 600;
 }
 </style>

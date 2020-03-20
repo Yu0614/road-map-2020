@@ -1,35 +1,33 @@
 <template>
- <div id="app">
-
-  <!-- <ul v-for="target of targets" :key="target.name"> -->
+  <div id="app">
+    <!-- <ul v-for="target of targets" :key="target.name"> -->
 
     <!-- <router-link :to="{ path: target.path }"> -->
-      <internet/>
-      <htmls/>
-      <css/>
-      <javascript/>
-      <versionControl/>
-      <webSecurity/>
-      <hostingService/>
-      <packageManagers/>
+    <internet />
+    <htmls />
+    <css />
+    <javascript />
+    <versionControl />
+    <webSecurity />
+    <hostingService />
+    <packageManagers />
     <!-- </router-link> -->
     <!--
       <li>
-        <div class="target-container">
+        <div class="target-container" v-on:click="accordionToggle">
           <p class="target-name">{{ target.name }}</p>
         </div>
         <ul v-for="target of Internet" :key="target.name">
           <li>
-            <div class="target-container2">
+            <div class="target-container2" v-if="isOpen">
               <p class="target-name">{{ target.name }}</p>
             </div>
           </li>
         </ul>
-      </li> -->
+    </li>-->
     <!---->
-  <!-- </ul> -->
-
- </div>
+    <!-- </ul> -->
+  </div>
 </template>
 
 <script>
@@ -57,34 +55,39 @@ export default {
       targets: [
         { name: 'Internet', path: 'internet' },
         { name: 'HTML', path: 'HTML' }
-      //   { name: 'CSS', path: 'CSS' },
-      //   { name: 'JavaScript', path: 'JavaScript' },
-      //   { name: 'VersionControl Systems' },
-      //   { name: 'Repo hosting services' },
-      //   { name: 'Web Security Knowledge' },
-      //   { name: 'Package Manager' },
-      //   { name: 'CSS Architecture' },
-      //   { name: 'CSS Processeor' },
-      //   { name: 'Build Tools' },
-      //   { name: 'Pick a Framework' },
-      //   { name: 'Modern CSS' },
-      //   { name: 'Web Components' },
-      //   { name: 'CSS Frameworks' },
-      //   { name: 'Testing your Apps' },
-      //   { name: 'Type Checkers' },
-      //   { name: 'Progressive Web Apps' },
-      //   { name: 'Server Side Rendering' },
-      //   { name: 'GraphQL' },
-      //   { name: 'Staric Site Generators' },
-      //   { name: 'Mobile Applications' },
-      //   { name: 'Desktop Applicaions' },
-      //   { name: 'Web Assembly' }
+        //   { name: 'CSS', path: 'CSS' },
+        //   { name: 'JavaScript', path: 'JavaScript' },
+        //   { name: 'VersionControl Systems' },
+        //   { name: 'Repo hosting services' },
+        //   { name: 'Web Security Knowledge' },
+        //   { name: 'Package Manager' },
+        //   { name: 'CSS Architecture' },
+        //   { name: 'CSS Processeor' },
+        //   { name: 'Build Tools' },
+        //   { name: 'Pick a Framework' },
+        //   { name: 'Modern CSS' },
+        //   { name: 'Web Components' },
+        //   { name: 'CSS Frameworks' },
+        //   { name: 'Testing your Apps' },
+        //   { name: 'Type Checkers' },
+        //   { name: 'Progressive Web Apps' },
+        //   { name: 'Server Side Rendering' },
+        //   { name: 'GraphQL' },
+        //   { name: 'Staric Site Generators' },
+        //   { name: 'Mobile Applications' },
+        //   { name: 'Desktop Applicaions' },
+        //   { name: 'Web Assembly' }
       ]
     }
   },
   computed: {
     limitCount () {
       return this.targets.slice(0, 4)
+    }
+  },
+  methods: {
+    accordionToggle: function () {
+      this.isOpen = !this.isOpen
     }
   },
   components: {
@@ -102,7 +105,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
+h1,
+h2 {
   font-weight: normal;
 }
 ul {
@@ -118,23 +122,23 @@ a {
 }
 
 .target-container {
-    background: yellow;
-    height: 4vh;
-    width: 20vw;
-    border: black solid 2px;
+  background: yellow;
+  height: 4vh;
+  width: 20vw;
+  border: black solid 2px;
 }
 
 .target-container2 {
-    background: orange;
-    height: 4vh;
-    width: 20vw;
-    border: black solid 2px;
+  background: orange;
+  height: 4vh;
+  width: 20vw;
+  border: black solid 2px;
 }
 
 p.target-name {
-    position: relative;
-    bottom: 7px;
-    font-family: "Gill Sans", sans-serif;
-    font-weight: 600;
+  position: relative;
+  bottom: 7px;
+  font-family: "Gill Sans", sans-serif;
+  font-weight: 600;
 }
 </style>

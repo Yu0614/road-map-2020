@@ -1,23 +1,19 @@
 <template>
  <div id="app">
-
   <ul v-for="target of targets" :key="target.name">
-    <!--<router-link :to="{ path: target.path }">-->
-      <li>
-        <div class="target-container">
-          <p class="target-name">{{ target.name }}</p>
-        </div>
-        <ul v-for="target of html" :key="target.name">
-          <li>
-            <div class="target-container2">
-              <p class="target-name">{{ target.name }}</p>
-            </div>
-          </li>
-        </ul>
-      </li>
-    <!--<</router-link>-->
+    <li>
+      <div class="target-container" v-on:click="accordionToggle">
+        <p class="target-name">{{ target.name }}</p>
+      </div>
+      <ul v-for="target of titles" :key="target.name" :class="{ '_state-open': isOpen }" v-on:click="accordionToggle">
+        <li>
+          <div class="target-container2" v-if="isOpen">
+            <p class="target-name">{{ target.name }}</p>
+          </div>
+        </li>
+      </ul>
+    </li>
   </ul>
-
  </div>
 </template>
 
@@ -26,7 +22,7 @@ export default {
   data: function () {
     return {
       // Reference :https://roadmap.sh/frontend
-      html: [
+      titles: [
         { name: 'Learn the basics' },
         { name: 'Writing Semantic HTML' },
         { name: 'Forms and Validations' },
@@ -36,12 +32,18 @@ export default {
       ],
       targets: [
         { name: 'HTML', path: 'htmls' }
-      ]
+      ],
+      isOpen: false
     }
   },
   computed: {
     limitCount () {
       return this.targets.slice(0, 4)
+    }
+  },
+  methods: {
+    accordionToggle: function () {
+      this.isOpen = !this.isOpen
     }
   }
 }

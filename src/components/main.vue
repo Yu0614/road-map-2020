@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="flex-app" class="flex-app">
     <!-- <ul v-for="target of targets" :key="target.name"> -->
 
     <!-- <router-link :to="{ path: target.path }"> -->
@@ -140,5 +140,12 @@ p.target-name {
   bottom: 7px;
   font-family: "Gill Sans", sans-serif;
   font-weight: 600;
+}
+
+.flex-app {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 28.5%;
+  padding-right: 20%;
 }
 </style>

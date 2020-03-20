@@ -4,10 +4,14 @@
   <!-- <ul v-for="target of targets" :key="target.name"> -->
 
     <!-- <router-link :to="{ path: target.path }"> -->
-      <internet></internet>
-      <htmls></htmls>
-      <css></css>
-      <javascript></javascript>
+      <internet/>
+      <htmls/>
+      <css/>
+      <javascript/>
+      <versionControl/>
+      <webSecurity/>
+      <hostingService/>
+      <packageManagers/>
     <!-- </router-link> -->
     <!--
       <li>
@@ -33,6 +37,10 @@ import internet from './internet.vue'
 import htmls from './htmls.vue'
 import javascript from './javascript.vue'
 import css from './css.vue'
+import versionControl from '@/components/versionControl'
+import webSecurity from '@/components/webSecurity'
+import hostingService from '@/components/hostingService'
+import packageManagers from '@/components/packageManagers'
 
 export default {
   data: function () {
@@ -83,7 +91,11 @@ export default {
     internet,
     htmls,
     css,
-    javascript
+    javascript,
+    versionControl,
+    webSecurity,
+    hostingService,
+    packageManagers
   }
 }
 </script>

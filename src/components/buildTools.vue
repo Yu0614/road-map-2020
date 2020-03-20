@@ -27,13 +27,11 @@ export default {
     return {
       // Reference :https://roadmap.sh/frontend
       html: [
-        { name: 'Learn the basics' },
-        { name: 'Making Layouts' },
-        { name: 'Responsive design and Media Queries' },
-        { name: 'Floats, Postioning, Display, Box Model, CSS Grid, Flex Box' }
+        { name: 'npm' },
+        { name: 'yarn' }
       ],
       targets: [
-        { name: 'CSS', path: 'css' }
+        { name: 'Build Tools', path: 'buildTools' }
       ]
     }
   },

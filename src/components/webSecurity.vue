@@ -27,13 +27,13 @@ export default {
     return {
       // Reference :https://roadmap.sh/frontend
       html: [
-        { name: 'Learn the basics' },
-        { name: 'Making Layouts' },
-        { name: 'Responsive design and Media Queries' },
-        { name: 'Floats, Postioning, Display, Box Model, CSS Grid, Flex Box' }
+        { name: 'HTTPS' },
+        { name: 'CORS' },
+        { name: 'Content Security Pollicy' },
+        { name: 'OWASP Security Risks' }
       ],
       targets: [
-        { name: 'CSS', path: 'css' }
+        { name: 'Web Security Knowledge', path: 'versionControl' }
       ]
     }
   },

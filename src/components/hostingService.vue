@@ -27,13 +27,12 @@ export default {
     return {
       // Reference :https://roadmap.sh/frontend
       html: [
-        { name: 'Learn the basics' },
-        { name: 'Making Layouts' },
-        { name: 'Responsive design and Media Queries' },
-        { name: 'Floats, Postioning, Display, Box Model, CSS Grid, Flex Box' }
+        { name: 'GitHub' },
+        { name: 'GitLub' },
+        { name: 'Bitbucket' }
       ],
       targets: [
-        { name: 'CSS', path: 'css' }
+        { name: 'Repo hosting services', path: 'versionControl' }
       ]
     }
   },

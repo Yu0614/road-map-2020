@@ -1,14 +1,19 @@
+
 <template>
   <div id="internet" class="component-box first" :class="{ '_state-open': isOpen }">
     <ul v-for="target of targets" :key="target.name" >
       <!--<router-link :to="{ path: target.path }">-->
       <li>
-        <div class="target-container" v-on:click="accordionToggle">
-          <p class="target-name">{{ target.name }}</p>
+        <div class="checkbox-counter">
+          [{{selectedTargets.length}}]
         </div>
-        <ul v-for="target of titles" :key="target.name" :class="{ '_state-open': isOpen }" v-on:click="accordionToggle">
+        <div class="target-container" v-on:click="accordionToggle" :class="{ '_state-open': isOpen }">
+          <p class="target-page-name">{{ target.name }}</p>
+        </div>
+        <ul v-for="target of titles" :key="target.name" :class="{ '_state-open': isOpen }">
           <li>
             <div class="target-container2" v-if="isOpen">
+              <input type="checkbox" class="checkbox-internet" v-model="selectedTargets" :value="target.name">
               <p class="target-name">{{ target.name }}</p>
             </div>
           </li>
@@ -35,7 +40,8 @@ export default {
       targets: [
         { name: 'Internet', path: 'internet' }
       ],
-      isOpen: false
+      selectedTargets: [],
+      isOpen: true
     }
   },
   computed: {
@@ -60,6 +66,7 @@ h2 {
 ul {
   list-style-type: none;
   padding: 0;
+  height: 4vh;
 }
 li {
   display: inline-block;
@@ -75,6 +82,10 @@ a {
   width: 20vw;
   border: black solid 2px;
 }
+.target-container._state-open {
+  margin-left: 10px;
+  margin-bottom: 8px;
+}
 
 .target-container2 {
   background: orange;
@@ -85,13 +96,29 @@ a {
 
 p.target-name {
   position: relative;
-  bottom: 7px;
+  bottom: 30px;
+  font-family: 'Gill Sans', sans-serif;
+  font-weight: 600;
+  padding-bottom: 100px;
+}
+
+p.target-page-name {
+  position: relative;
+  bottom: 8px;
   font-family: 'Gill Sans', sans-serif;
   font-weight: 600;
 }
 
 div#internet {
     background: red;
+    width: 25vw;
+    margin: auto;
+    height: 34vh;
 }
 
+input.checkbox-internet {
+    position: relative;
+    right: 11.2vw;
+    top: 5px;
+}
 </style>

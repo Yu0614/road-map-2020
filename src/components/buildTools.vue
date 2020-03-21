@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="buildTool">
     <ul v-for="target of targets" :key="target.name">
       <!--<router-link :to="{ path: target.path }">-->
       <li>

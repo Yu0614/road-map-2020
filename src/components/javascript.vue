@@ -1,5 +1,5 @@
 <template>
-  <div id="javascript">
+  <div id="javascript" class="component-box second" :class="{ '_state-open': isOpen }">
     <ul v-for="target of targets" :key="target.name">
       <!--<router-link :to="{ path: target.path }">-->
       <li>
@@ -88,5 +88,9 @@ p.target-name {
   bottom: 7px;
   font-family: "Gill Sans", sans-serif;
   font-weight: 600;
+}
+
+div#javascript {
+    background: green; /*debug*/
 }
 </style>

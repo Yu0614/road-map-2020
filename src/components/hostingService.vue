@@ -1,5 +1,5 @@
 <template>
-  <div id="hostingService">
+  <div id="hostingService" class="component-box force" :class="{ '_state-open': isOpen }">
     <ul v-for="target of targets" :key="target.name">
       <!--<router-link :to="{ path: target.path }">-->
       <li>
@@ -80,4 +80,8 @@ p.target-name {
   font-family: "Gill Sans", sans-serif;
   font-weight: 600;
 }
+div#hostingService {
+    background: teal; /*debug*/
+}
+
 </style>

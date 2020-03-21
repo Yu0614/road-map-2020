@@ -1,5 +1,5 @@
 <template>
-  <div id="packageManager">
+  <div id="packageManager" class="component-box force" :class="{ '_state-open': isOpen }">
     <ul v-for="target of targets" :key="target.name">
       <!--<router-link :to="{ path: target.path }">-->
       <li>
@@ -84,5 +84,9 @@ p.target-name {
   bottom: 7px;
   font-family: "Gill Sans", sans-serif;
   font-weight: 600;
+}
+
+div#packageManager {
+    background: purple; /*debug*/
 }
 </style>

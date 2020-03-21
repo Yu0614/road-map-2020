@@ -145,7 +145,40 @@ p.target-name {
 .flex-app {
   display: flex;
   flex-wrap: wrap;
-  padding-left: 28.5%;
+  justify-content: center;
+  padding-left: 20%;
   padding-right: 20%;
+}
+
+.component-box {
+  height: 10vh;
+}
+
+.component-box._state-open.first {
+  height: 34vh;
+  min-width: 20vw;
+  max-height: 40vh;
+  background: blanchedalmond!important;
+}
+
+.component-box._state-open.second {
+  height: 30vh;
+  min-width: 20vw;
+  max-height: 40vh;
+  background: darkblue!important;
+}
+
+.component-box._state-open.third {
+  height: 25vh;
+  min-width: 20vw;
+  max-height: 40vh;
+  background: gray!important;
+}
+
+.component-box._state-open.force {
+  height: 21vh;
+  min-width: 20vw;
+  max-height: 40vh;
+  background: lightcoral!important;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
-  <div id="internet">
-    <ul v-for="target of targets" :key="target.name">
+  <div id="internet" class="component-box first" :class="{ '_state-open': isOpen }">
+    <ul v-for="target of targets" :key="target.name" >
       <!--<router-link :to="{ path: target.path }">-->
       <li>
         <div class="target-container" v-on:click="accordionToggle">
@@ -89,4 +89,9 @@ p.target-name {
   font-family: 'Gill Sans', sans-serif;
   font-weight: 600;
 }
+
+div#internet {
+    background: red;
+}
+
 </style>

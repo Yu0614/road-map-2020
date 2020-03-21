@@ -1,5 +1,5 @@
 <template>
-  <div id="versionControl">
+  <div id="versionControl" class="component-box third" :class="{ '_state-open': isOpen }">
     <ul v-for="target of targets" :key="target.name">
       <!--<router-link :to="{ path: target.path }">-->
       <li>
@@ -79,5 +79,9 @@ p.target-name {
   bottom: 7px;
   font-family: "Gill Sans", sans-serif;
   font-weight: 600;
+}
+
+div#versionControl {
+    background: orchid; /*debug*/
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div id="webSecurity">
+  <div id="webSecurity" class="component-box third" :class="{ '_state-open': isOpen }">
     <ul v-for="target of targets" :key="target.name">
       <!--<router-link :to="{ path: target.path }">-->
       <li>
@@ -84,5 +84,8 @@ p.target-name {
   bottom: 7px;
   font-family: 'Gill Sans', sans-serif;
   font-weight: 600;
+}
+div#webSecurity {
+    background: gold; /*debug*/
 }
 </style>

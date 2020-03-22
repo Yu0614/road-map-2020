@@ -5,7 +5,7 @@
       <!--<router-link :to="{ path: target.path }">-->
       <li>
         <div class="checkbox-counter">
-          [{{selectedTargets.length}}]
+          {{selectedTargets.length}}
         </div>
         <div class="target-container" v-on:click="accordionToggle" :class="{ '_state-open': isOpen }">
           <p class="target-page-name">{{ target.name }}</p>
@@ -67,6 +67,7 @@ ul {
   list-style-type: none;
   padding: 0;
   height: 4vh;
+  padding-bottom: 1vh;
 }
 li {
   display: inline-block;
@@ -113,12 +114,37 @@ div#internet {
     background: red;
     width: 25vw;
     margin: auto;
-    height: 34vh;
+    height: 10vh;
 }
 
 input.checkbox-internet {
     position: relative;
     right: 11.2vw;
     top: 5px;
+}
+
+.checkbox-counter {
+    position: relative;
+    left: 18vw;
+    top: 15px;
+    background: cornflowerblue;
+    text-align: center;
+    width: 25px;
+    color: white;
+    border-radius: 14px;
+}
+
+.component-box {
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.component-box._state-open.first {
+  height: 34vh!important;
+  min-width: 20vw;
+  max-height: 40vh;
+  background: blanchedalmond!important;
 }
 </style>

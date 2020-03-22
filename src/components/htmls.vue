@@ -90,4 +90,11 @@ p.target-name {
 div#htmls {
     background: blue; /*debug*/
 }
+
+.checkbox-counter {
+    position: relative;
+    left: 8vw;
+    top: 15px;
+}
+
 </style>

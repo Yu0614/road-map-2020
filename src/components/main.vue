@@ -155,7 +155,7 @@ p.target-name {
 }
 
 .component-box._state-open.first {
-  height: 34vh;
+  height: 34vh!important;
   min-width: 20vw;
   max-height: 40vh;
   background: blanchedalmond!important;
